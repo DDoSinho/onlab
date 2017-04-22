@@ -1,0 +1,47 @@
+﻿@model Dal.Model.Identity.RegisterViewModel
+
+@{
+    Layout = "_CoverLayout";
+}
+
+<link href="~/css/login.css" rel="stylesheet" />
+
+<body>
+    <div class="container" style="width:700px;">
+
+        <form class="form-signin" asp-controller="Account" asp-action="Register" method="post">
+            <h2 class="form-signin-heading">Registration</h2>
+            <div asp-validation-summary="All"></div>
+            <div>
+                <label asp-for="Email" class="sr-only">Email address</label>
+                <div>
+                    <input asp-for="Email" type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+                    <span asp-validation-for="Email"></span>
+                </div>
+            </div>
+            <div>
+                <label asp-for="Password" class="sr-only">Password</label>
+                <div>
+                    <input asp-for="Password" type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+                    <span asp-validation-for="Password"></span>
+                </div>
+            </div>
+            <div>
+                <label asp-for="ConfirmPassword" class="sr-only">Password</label>
+                <div>
+                    <input asp-for="ConfirmPassword" type="password" id="inputPassword" class="form-control" placeholder="Password Again" required>
+                    <span asp-validation-for="ConfirmPassword"></span>
+                </div>
+            </div>
+            <div class="checkbox">
+                <label asp-for="Administrator">
+                    <input type="checkbox" asp-for="Administrator" />
+                    Administrator
+                </label>
+
+            </div>
+            <button class="btn btn-lg btn-default" type="submit">Register</button>
+        </form>
+
+    </div>
+</body>
