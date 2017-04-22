@@ -15,7 +15,7 @@ namespace Web.Services
         {
             _questionManager = questionManager;
         }
-
+        //asd
         public IEnumerable<Quiz> GetQuizs()
         {
             return _questionManager.GetQuizs();
