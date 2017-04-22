@@ -18,6 +18,7 @@ namespace Web.Services
         //asd
         public IEnumerable<Quiz> GetQuizs()
         {
+            string asd;
             return _questionManager.GetQuizs();
         }
     }
